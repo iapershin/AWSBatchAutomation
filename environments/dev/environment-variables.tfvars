@@ -1,0 +1,5 @@
+environment        = "dev"
+execution_role     = "<execution_role>"
+cloudwatch_role    = "<cloudwatch_role>"
+container_registry = "<container_registry>"
+batch_queue_prefix = "<batch_queue_prefix>"
