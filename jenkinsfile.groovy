@@ -23,7 +23,7 @@ pipeline {
             }
         stage('prod') {
             when {
-                changelog 'prod'
+                changelog '.*^\\[prod\\] .+$'
             }
             steps {
                 echo 'prod'
