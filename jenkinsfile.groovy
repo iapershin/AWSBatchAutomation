@@ -11,6 +11,9 @@ pipeline {
 
     stages {
         stage('Plan') {
+            when {
+                changeset pattern: "batch-jobs/", comparator: "GLOB"
+            }
             steps {
                 echo 'works'
                 }
