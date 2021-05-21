@@ -23,9 +23,7 @@ pipeline {
             }
         stage('prod') {
             when {
-                expression {
-                    currentBuild.changeSets.contains("prod")
-                }
+                changelog 'prod'
             }
             steps {
                 echo 'prod'
