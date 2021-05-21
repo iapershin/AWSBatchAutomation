@@ -8,14 +8,23 @@ pipeline {
         booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
     }
 
-
     stages {
-        stage('Plan') {
-            when {
-                changeset pattern: "*.tf", comparator: "GLOB"
-            }
+        stage('show changes ') {
             steps {
                 echo 'works'
+                }
+            }
+        stage('dev') {
+            steps {
+                echo 'dev'
+                }
+            }
+        stage('prod') {
+//            when {
+//                changeset pattern: "*.tf", comparator: "GLOB"
+//            }
+            steps {
+                echo 'prod'
                 }
             }
         }
