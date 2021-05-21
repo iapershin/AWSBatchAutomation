@@ -22,9 +22,11 @@ pipeline {
                 }
             }
         stage('prod') {
-//            when {
-//                changeset pattern: "*.tf", comparator: "GLOB"
-//            }
+            when {
+                expression {
+                    currentBuild.changeSets.contains("prod")
+                }
+            }
             steps {
                 echo 'prod'
                 }
