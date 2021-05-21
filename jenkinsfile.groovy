@@ -11,7 +11,9 @@ pipeline {
     stages {
         stage('show changes ') {
             steps {
-                echo 'works'
+                script {
+                    println(currentBuild.changeSets)
+                    }
                 }
             }
         stage('dev') {
