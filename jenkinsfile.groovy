@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Plan') {
             when {
-                changeset pattern: "batch-jobs/", comparator: "GLOB"
+                changeset pattern: "*.tf", comparator: "GLOB"
             }
             steps {
                 echo 'works'
